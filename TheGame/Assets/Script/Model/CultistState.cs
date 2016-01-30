@@ -4,5 +4,4 @@ using System.Collections;
 [System.Serializable]
 public class CultistState
 {
-    public bool climbEnabled;
 }

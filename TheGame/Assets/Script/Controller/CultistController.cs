@@ -14,6 +14,8 @@ public class CultistController : MonoBehaviour {
     public float speed;
     public Boundary boundary;
 
+    private bool climbEnabled;
+
     private Rigidbody2D myRigidBody;
     private Animator myAnimator;
 
@@ -30,14 +32,14 @@ public class CultistController : MonoBehaviour {
 
     private void TryToClimbLadder()
     {
-        GameState.instance.CultistState.climbEnabled = false;
+        climbEnabled = false;
         foreach (Transform ladderCheck in ladderChecks)
         {
             RaycastHit2D hit = Physics2D.Linecast(transform.position, ladderCheck.position, 1 << LayerMask.NameToLayer("Ladder"));
 
             if (hit)
             {
-                GameState.instance.CultistState.climbEnabled = true;
+                climbEnabled = true;
             }
         }
     }
@@ -48,7 +50,7 @@ public class CultistController : MonoBehaviour {
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector2 movement;
-        if (GameState.instance.CultistState.climbEnabled)
+        if (climbEnabled)
         {
             myRigidBody.gravityScale = 0.0f;
             movement = new Vector2(speed * moveHorizontal, speed * moveVertical);

@@ -185,34 +185,78 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: CultistRig/felsotest/fej
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0.3732}
+        inSlope: {x: 0, y: 0, z: 99.2916}
+        outSlope: {x: 0, y: 0, z: 99.2916}
+        tangentMode: 0
+      - time: 0.25
+        value: {x: 0, y: 0, z: 25.1961}
+        inSlope: {x: 0, y: 0, z: -2.2739334}
+        outSlope: {x: 0, y: 0, z: -2.2739334}
+        tangentMode: 0
+      - time: 0.625
+        value: {x: 0, y: 0, z: -13.7437}
+        inSlope: {x: 0, y: 0, z: -103.83947}
+        outSlope: {x: 0, y: 0, z: -103.83947}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: CultistRig/altest/j_abfej
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -0.3286}
+        inSlope: {x: 0, y: 0, z: -67.131996}
+        outSlope: {x: 0, y: 0, z: -67.131996}
+        tangentMode: 0
+      - time: 0.25
+        value: {x: 0, y: 0, z: -17.111599}
+        inSlope: {x: 0, y: 0, z: 14.677467}
+        outSlope: {x: 0, y: 0, z: 14.677467}
+        tangentMode: 0
+      - time: 0.625
+        value: {x: 0, y: 0, z: 19.071}
+        inSlope: {x: 0, y: 0, z: 96.48693}
+        outSlope: {x: 0, y: 0, z: 96.48693}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: CultistRig/altest/b_labfej
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: {x: 0.19585776, y: -1.1425035, z: 0}
-        inSlope: {x: -2.431431, y: 0, z: 0}
-        outSlope: {x: -2.431431, y: 0, z: 0}
+        inSlope: {x: -2.4314308, y: 0, z: 0}
+        outSlope: {x: -2.4314308, y: 0, z: 0}
         tangentMode: 0
       - time: 0.25
-        value: {x: -0.412, y: -1.1425035, z: 0}
+        value: {x: -0.4119999, y: -1.1425035, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - time: 0.5
         value: {x: 0.19585776, y: -1.1425035, z: 0}
-        inSlope: {x: 1.9362844, y: 0, z: 0}
-        outSlope: {x: 1.9362844, y: 0, z: 0}
+        inSlope: {x: 1.9362851, y: 0, z: 0}
+        outSlope: {x: 1.9362851, y: 0, z: 0}
         tangentMode: 0
       - time: 0.625
-        value: {x: 0.376, y: -1.1425035, z: 0}
+        value: {x: 0.3760002, y: -1.1425035, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - time: 0.75
         value: {x: 0.19585776, y: -1.1425035, z: 0}
-        inSlope: {x: -1.4411378, y: 0, z: 0}
-        outSlope: {x: -1.4411378, y: 0, z: 0}
+        inSlope: {x: -1.4411395, y: 0, z: 0}
+        outSlope: {x: -1.4411395, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -223,18 +267,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: {x: -0.3851869, y: -1.1294465, z: 0}
-        inSlope: {x: 3.0767477, y: 0, z: 0}
-        outSlope: {x: 3.0767477, y: 0, z: 0}
+        inSlope: {x: 3.076748, y: 0, z: 0}
+        outSlope: {x: 3.076748, y: 0, z: 0}
         tangentMode: 0
       - time: 0.25
-        value: {x: 0.384, y: -1.1294465, z: 0}
+        value: {x: 0.3840001, y: -1.1294465, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - time: 0.5
         value: {x: -0.3851869, y: -1.1294465, z: 0}
-        inSlope: {x: -1.8256261, y: 0, z: 0}
-        outSlope: {x: -1.8256261, y: 0, z: 0}
+        inSlope: {x: -1.8256263, y: 0, z: 0}
+        outSlope: {x: -1.8256263, y: 0, z: 0}
         tangentMode: 0
       - time: 0.625
         value: {x: -0.457, y: -1.1294465, z: 0}
@@ -380,6 +424,21 @@ AnimationClip:
     path: CultistRig/felsotest/j_felkar/j_alkar/j_kezfej/cigi
     classID: 1
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: CultistRig/felsotest/j_felkar/j_alkar/j_kezfej/coffee2
+    classID: 1
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 16
   m_WrapMode: 0
@@ -430,6 +489,18 @@ AnimationClip:
       classID: 4
       customType: 14
       isPPtrCurve: 0
+    - path: 645349808
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - path: 2521162876
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
     - path: 2773150658
       attribute: 2086281974
       script: {fileID: 0}
@@ -437,6 +508,12 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - path: 3547486339
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4248872454
       attribute: 2086281974
       script: {fileID: 0}
       classID: 1
@@ -499,28 +576,28 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0.19585776
-        inSlope: -2.431431
-        outSlope: -2.431431
+        inSlope: -2.4314308
+        outSlope: -2.4314308
         tangentMode: 10
       - time: 0.25
-        value: -0.412
+        value: -0.4119999
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 0.5
         value: 0.19585776
-        inSlope: 1.9362844
-        outSlope: 1.9362844
+        inSlope: 1.9362851
+        outSlope: 1.9362851
         tangentMode: 10
       - time: 0.625
-        value: 0.376
+        value: 0.3760002
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 0.75
         value: 0.19585776
-        inSlope: -1.4411378
-        outSlope: -1.4411378
+        inSlope: -1.4411395
+        outSlope: -1.4411395
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -604,18 +681,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: -0.3851869
-        inSlope: 3.0767477
-        outSlope: 3.0767477
+        inSlope: 3.076748
+        outSlope: 3.076748
         tangentMode: 10
       - time: 0.25
-        value: 0.384
+        value: 0.3840001
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 0.5
         value: -0.3851869
-        inSlope: -1.8256261
-        outSlope: -1.8256261
+        inSlope: -1.8256263
+        outSlope: -1.8256263
         tangentMode: 10
       - time: 0.625
         value: -0.457
@@ -1634,6 +1711,171 @@ AnimationClip:
     path: CultistRig/felsotest/j_felkar/j_alkar/j_kezfej/cigi
     classID: 1
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: CultistRig/felsotest/j_felkar/j_alkar/j_kezfej/coffee2
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.625
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: CultistRig/altest/j_abfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.625
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: CultistRig/altest/j_abfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.3732
+        inSlope: 99.2916
+        outSlope: 99.2916
+        tangentMode: 10
+      - time: 0.25
+        value: 25.1961
+        inSlope: -2.2739334
+        outSlope: -2.2739334
+        tangentMode: 10
+      - time: 0.625
+        value: -13.7437
+        inSlope: -103.83947
+        outSlope: -103.83947
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: CultistRig/altest/j_abfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.625
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: CultistRig/altest/b_labfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.625
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: CultistRig/altest/b_labfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.3286
+        inSlope: -67.131996
+        outSlope: -67.131996
+        tangentMode: 10
+      - time: 0.25
+        value: -17.111599
+        inSlope: 14.677467
+        outSlope: 14.677467
+        tangentMode: 10
+      - time: 0.625
+        value: 19.071
+        inSlope: 96.48693
+        outSlope: 96.48693
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: CultistRig/altest/b_labfej
+    classID: 4
+    script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2
@@ -1813,6 +2055,66 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
     path: CultistRig/felsotest/j_felkar/j_alkar
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: CultistRig/altest/b_labfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: CultistRig/altest/b_labfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: CultistRig/altest/b_labfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: CultistRig/altest/j_abfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: CultistRig/altest/j_abfej
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: CultistRig/altest/j_abfej
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

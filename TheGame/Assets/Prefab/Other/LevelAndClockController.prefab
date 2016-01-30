@@ -41,7 +41,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lengthOfLevel: 10
-  ritualsToComplete: []
 --- !u!114 &11433400
 MonoBehaviour:
   m_ObjectHideFlags: 1

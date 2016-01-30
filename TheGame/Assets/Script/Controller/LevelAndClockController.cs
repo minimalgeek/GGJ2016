@@ -1,49 +1,81 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Linq;
 
 public class LevelAndClockController : MonoBehaviour {
 
     private LevelLoader levelLoader;
     private Text clockText;
-    private GameObject ritualContainer;
     private GameObject player;
     private GameObject failedPanel;
+    private GameObject winPanel;
+
+    private GameObject[] ritualsToComplete;
+    private string[] ritualsStrings;
+    private GameObject[] ritualsIcons;
 
     public int lengthOfLevel = 10;
     private float counter = 0.0f;
 
     private float countDown = 2.0f;
 
-    [SerializeField]
-    private GameObject[] ritualsToComplete;
-
-	void Start () {
+	void Start ()
+    {
         levelLoader = FindObjectOfType<LevelLoader>();
         clockText = GameObject.Find("Clock").GetComponent<Text>();
-        ritualContainer = GameObject.Find("RitualContainer");
         player = GameObject.FindGameObjectWithTag("Player");
         failedPanel = GameObject.Find("FailedPanel");
+        winPanel = GameObject.Find("WinPanel");
 
-        failedPanel.SetActive(false);
+        CollectRitualsAndRitualNames();
+        DeactivatePanels();
+
         counter = lengthOfLevel;
-
         GameState.instance.LevelState.ResetExecutedRituals();
-
         SeedRitualOrder();
-	}
-	
-	void Update () {
+    }
+
+    private void DeactivatePanels()
+    {
+        failedPanel.SetActive(false);
+        winPanel.SetActive(false);
+    }
+
+    private void CollectRitualsAndRitualNames()
+    {
+        ritualsToComplete = GameObject.FindGameObjectsWithTag("Ritual");
+        ritualsIcons = GameObject.FindGameObjectsWithTag("RitualIcon");
+
+        ritualsStrings = new string[ritualsToComplete.Length];
+        int idx = 0;
+        foreach (GameObject ritual in ritualsToComplete)
+        {
+            ritualsStrings[idx++] = ritual.name;
+        }
+
+        foreach (GameObject ritual in ritualsIcons)
+        {
+            ritual.SetActive(false);
+        }
+    }
+
+    void Update () {
         float timePassed = Time.deltaTime;
         counter -= timePassed;
 
         if (counter > 0)
         {
-            string seconds = string.Format("0{0:x2}", ((int)counter).ToString());
-            clockText.text = "00:" + seconds;
-        }
-
-        if (counter <= 0)
+            string seconds = ((int)counter).ToString();
+            if (seconds.Length == 2) {
+                clockText.text = "00:" + seconds;
+            }
+            else
+            {
+                clockText.text = "00:0" + seconds;
+            }
+        } else if (counter <= 0)
         {
             // level should be ended until now...
             failedPanel.SetActive(true);
@@ -55,10 +87,42 @@ public class LevelAndClockController : MonoBehaviour {
             countDown -= timePassed;
         }
 
+        CheckWin();
 	}
 
     private void SeedRitualOrder()
     {
+        ritualsStrings = Shuffle(ritualsStrings);
 
+        int idx = 0;
+        foreach (string ritualName in ritualsStrings)
+        {
+            foreach (GameObject ritualIcon in ritualsIcons)
+            {
+                if (ritualIcon.name == ritualName)
+                {
+                    ritualIcon.SetActive(true);
+                    Vector3 oriPos = ritualIcon.GetComponent<RectTransform>().anchoredPosition;
+                    oriPos.x = 25 + idx * 50;
+                    ritualIcon.GetComponent<RectTransform>().anchoredPosition = oriPos;
+                    idx++;
+                }
+            }
+        }
+    }
+
+    
+
+    private void CheckWin()
+    {
+
+    }
+
+
+
+    private string[] Shuffle(string[] list)
+    {
+        System.Random rnd = new System.Random();
+        return list.OrderBy(x => rnd.Next()).ToArray();
     }
 }

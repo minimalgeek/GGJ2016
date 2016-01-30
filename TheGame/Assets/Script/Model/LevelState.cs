@@ -18,4 +18,8 @@ public class LevelState
         executedRituals.Add(ritualName);
     }
     
+    public void ResetExecutedRituals()
+    {
+        executedRituals = new ArrayList();
+    }
 }

@@ -110,16 +110,12 @@ public class LevelAndClockController : MonoBehaviour {
             }
         }
     }
-
     
-
     private void CheckWin()
     {
 
     }
-
-
-
+    
     private string[] Shuffle(string[] list)
     {
         System.Random rnd = new System.Random();

@@ -2,11 +2,13 @@
 using System.Collections;
 
 [System.Serializable]
-public class RitualState
+public class LevelState
 {
+    public int currentLevel;
+    [System.NonSerialized]
     private ArrayList executedRituals;
 
-    public RitualState()
+    public LevelState()
     {
         executedRituals = new ArrayList();
     }

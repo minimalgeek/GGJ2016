@@ -27,7 +27,7 @@ public class RitualColliderController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space) && executionEnabled)
         {
-            GameState.instance.RitualState.AddExecutedRitual(this.gameObject.name);
+            GameState.instance.LevelState.AddExecutedRitual(this.gameObject.name);
             Destroy(image.GetComponent<Image>());
             Destroy(gameObject);
         }

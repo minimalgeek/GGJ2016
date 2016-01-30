@@ -21,6 +21,8 @@ public class LevelAndClockController : MonoBehaviour {
 
     private float countDown = 2.0f;
 
+    private bool levelWon = false;
+
 	void Start ()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
@@ -65,29 +67,43 @@ public class LevelAndClockController : MonoBehaviour {
         float timePassed = Time.deltaTime;
         counter -= timePassed;
 
-        if (counter > 0)
-        {
-            string seconds = ((int)counter).ToString();
-            if (seconds.Length == 2) {
-                clockText.text = "00:" + seconds;
-            }
-            else
-            {
-                clockText.text = "00:0" + seconds;
-            }
-        } else if (counter <= 0)
+        if (levelWon)
         {
             // level should be ended until now...
-            failedPanel.SetActive(true);
+            winPanel.SetActive(true);
             Destroy(player);
             if (countDown <= 0)
             {
-                levelLoader.LoadCurrentLevel();
+                levelLoader.LoadNextLevel();
             }
             countDown -= timePassed;
         }
-
-        CheckWin();
+        else
+        {
+            if (counter > 0)
+            {
+                string seconds = ((int)counter).ToString();
+                if (seconds.Length == 2)
+                {
+                    clockText.text = "00:" + seconds;
+                }
+                else
+                {
+                    clockText.text = "00:0" + seconds;
+                }
+            }
+            else if (counter <= 0)
+            {
+                // level should be ended until now...
+                failedPanel.SetActive(true);
+                Destroy(player);
+                if (countDown <= 0)
+                {
+                    levelLoader.LoadCurrentLevel();
+                }
+                countDown -= timePassed;
+            }
+        }
 	}
 
     private void SeedRitualOrder()
@@ -111,9 +127,20 @@ public class LevelAndClockController : MonoBehaviour {
         }
     }
     
-    private void CheckWin()
+    public void ProgessAndCheckWin(string newlyCompletedRitual)
     {
-
+        LevelState levelState = GameState.instance.LevelState;
+        if (levelState.LatestCompletedIndex == ritualsStrings.Length - 1)
+        {
+            levelWon = true;
+        }
+        else if (ritualsStrings[levelState.LatestCompletedIndex] == newlyCompletedRitual)
+        {
+            // continue
+        } else
+        {
+            counter = 0;
+        }
     }
     
     private string[] Shuffle(string[] list)

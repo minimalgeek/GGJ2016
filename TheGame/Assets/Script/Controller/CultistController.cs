@@ -57,7 +57,7 @@ public class CultistController : MonoBehaviour {
         } else
         {
             myRigidBody.gravityScale = 1.0f;
-            movement = new Vector2(speed * moveHorizontal, 0.0f);
+            movement = new Vector2(speed * moveHorizontal, myRigidBody.velocity.y);
         }
         myRigidBody.velocity = movement;
         myAnimator.SetFloat("Speed", Mathf.Abs(moveHorizontal));

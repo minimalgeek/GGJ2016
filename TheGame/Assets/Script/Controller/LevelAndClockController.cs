@@ -134,11 +134,9 @@ public class LevelAndClockController : MonoBehaviour {
         {
             levelWon = true;
         }
-        else if (ritualsStrings[levelState.LatestCompletedIndex] == newlyCompletedRitual)
+        else if (! (ritualsStrings[levelState.LatestCompletedIndex] == newlyCompletedRitual))
         {
-            // continue
-        } else
-        {
+            // wrong ritual order!
             counter = 0;
         }
     }

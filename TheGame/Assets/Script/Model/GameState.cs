@@ -26,11 +26,13 @@ public class GameState : LoadableData
     private GameState()
     {
         CultistState = new CultistState();
+        RitualState = new RitualState();
     }
     #endregion
 
     private CultistState cultistState;
-    
+    private RitualState ritualState;
+
     public CultistState CultistState
     {
         get
@@ -44,6 +46,19 @@ public class GameState : LoadableData
         }
     }
 
+    public RitualState RitualState
+    {
+        get
+        {
+            return ritualState;
+        }
+
+        set
+        {
+            ritualState = value;
+        }
+    }
+
     #region Overridden functions for loading/saving
     protected override void LoadData(MemoryStream ms)
     {
@@ -51,6 +66,7 @@ public class GameState : LoadableData
         GameState gd = (GameState)formatter.Deserialize(ms);
 
         this.CultistState = gd.CultistState == null ? new CultistState() : gd.CultistState;
+        this.RitualState = gd.RitualState == null ? new RitualState() : gd.RitualState;
     }
 
     public override string GetFileName()

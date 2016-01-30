@@ -9,15 +9,18 @@ public class Boundary
 
 public class CultistController : MonoBehaviour {
 
-    public float speed;
-    public Boundary boundary;
-    private Rigidbody2D myRigidBody;
     [SerializeField]
     private Transform[] ladderChecks;
+    public float speed;
+    public Boundary boundary;
+
+    private Rigidbody2D myRigidBody;
+    private Animator myAnimator;
 
     public void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -45,7 +48,6 @@ public class CultistController : MonoBehaviour {
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector2 movement;
-
         if (GameState.instance.CultistState.climbEnabled)
         {
             myRigidBody.gravityScale = 0.0f;
@@ -56,6 +58,7 @@ public class CultistController : MonoBehaviour {
             movement = new Vector2(speed * moveHorizontal, 0.0f);
         }
         myRigidBody.velocity = movement;
+        myAnimator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
 
         myRigidBody.position = new Vector3(
             Mathf.Clamp(myRigidBody.position.x, boundary.xMin, boundary.xMax),

@@ -8,9 +8,11 @@ public class RitualColliderController : MonoBehaviour {
     public RectTransform image;
 
     private LevelAndClockController levelAndClockController;
+    private CultistController cultistController;
 
     void Start()
     {
+        cultistController = FindObjectOfType<CultistController>();
         levelAndClockController = FindObjectOfType<LevelAndClockController>();
     }
 
@@ -39,6 +41,7 @@ public class RitualColliderController : MonoBehaviour {
             Destroy(gameObject);
 
             levelAndClockController.ProgessAndCheckWin(this.gameObject.name);
+            cultistController.Animate(this.gameObject.name);
         }
     }
 

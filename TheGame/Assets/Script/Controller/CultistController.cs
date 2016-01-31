@@ -16,19 +16,49 @@ public class CultistController : MonoBehaviour {
 
     private bool climbEnabled;
     private bool facingRight = true;
+    private string currentAnimation;
 
     private Rigidbody2D myRigidBody;
     private Animator myAnimator;
+
+    private GameObject[] ritualImages;
 
     public void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+
+        ritualImages = GameObject.FindGameObjectsWithTag("RitualImage");
+
+        foreach (GameObject ritualImage in ritualImages)
+        {
+            ritualImage.SetActive(false);
+        }
     }
 
     void Update()
     {
         TryToClimbLadder();
+
+        if (NotRitualAnimatorState())
+        {
+            ActivateImages(currentAnimation, false);
+        } else
+        {
+            ActivateImages(currentAnimation, true);
+        }
+    }
+
+    private void ActivateImages(string name, bool setOrNot)
+    {
+        foreach (GameObject ritualImage in ritualImages)
+        {
+            if (name == ritualImage.name)
+            {
+                ritualImage.SetActive(setOrNot);
+                break;
+            }
+        }
     }
 
     private void TryToClimbLadder()
@@ -81,4 +111,16 @@ public class CultistController : MonoBehaviour {
             transform.localScale = scale;
         }
     }
+
+    public void Animate(string triggerName)
+    {
+        myAnimator.SetTrigger(triggerName);
+        currentAnimation = triggerName;
+    }
+
+    private bool NotRitualAnimatorState()
+    {
+        return myAnimator.GetCurrentAnimatorStateInfo(0).IsTag("NotRitual");
+    }
+
 }

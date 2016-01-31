@@ -73,7 +73,7 @@ public class LevelAndClockController : MonoBehaviour {
         {
             // level should be ended until now...
             winPanel.SetActive(true);
-            Destroy(player);
+            FreezePlayer();
             if (countDown <= 0 && !newLoaded)
             {
                 levelLoader.LoadNextLevel();
@@ -99,7 +99,7 @@ public class LevelAndClockController : MonoBehaviour {
             {
                 // level should be ended until now...
                 failedPanel.SetActive(true);
-                Destroy(player);
+                FreezePlayer();
                 if (countDown <= 0)
                 {
                     levelLoader.LoadCurrentLevel();
@@ -108,6 +108,13 @@ public class LevelAndClockController : MonoBehaviour {
             }
         }
 	}
+
+    private void FreezePlayer()
+    {
+        player.GetComponent<Rigidbody2D>().constraints =
+                RigidbodyConstraints2D.FreezePositionX |
+                RigidbodyConstraints2D.FreezePositionY;
+    }
 
     private void SeedRitualOrder()
     {

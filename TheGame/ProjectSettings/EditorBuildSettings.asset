@@ -11,5 +11,5 @@ EditorBuildSettings:
     path: Assets/Scene/Menu.unity
   - enabled: 1
     path: Assets/Scene/Proto.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Level1.unity

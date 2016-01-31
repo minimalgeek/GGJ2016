@@ -2898,6 +2898,18 @@ Prefab:
       propertyPath: image
       value: 
       objectReference: {fileID: 799813500}
+    - target: {fileID: 19800390, guid: 71df13bb05a48844ea4d23d891bbb77a, type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800390, guid: 71df13bb05a48844ea4d23d891bbb77a, type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800390, guid: 71df13bb05a48844ea4d23d891bbb77a, type: 2}
+      propertyPath: EmissionModule.rate.scalar
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71df13bb05a48844ea4d23d891bbb77a, type: 2}
   m_IsPrefabParent: 0

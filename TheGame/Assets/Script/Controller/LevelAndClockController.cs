@@ -119,7 +119,7 @@ public class LevelAndClockController : MonoBehaviour {
                 {
                     ritualIcon.SetActive(true);
                     Vector3 oriPos = ritualIcon.GetComponent<RectTransform>().anchoredPosition;
-                    oriPos.x = 25 + idx * 50;
+                    oriPos.x = 10 + idx * 53;
                     ritualIcon.GetComponent<RectTransform>().anchoredPosition = oriPos;
                     idx++;
                 }

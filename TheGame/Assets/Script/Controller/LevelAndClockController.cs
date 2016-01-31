@@ -23,6 +23,8 @@ public class LevelAndClockController : MonoBehaviour {
 
     private bool levelWon = false;
 
+    private bool newLoaded = false;
+
 	void Start ()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
@@ -72,9 +74,10 @@ public class LevelAndClockController : MonoBehaviour {
             // level should be ended until now...
             winPanel.SetActive(true);
             Destroy(player);
-            if (countDown <= 0)
+            if (countDown <= 0 && !newLoaded)
             {
                 levelLoader.LoadNextLevel();
+                newLoaded = true;
             }
             countDown -= timePassed;
         }

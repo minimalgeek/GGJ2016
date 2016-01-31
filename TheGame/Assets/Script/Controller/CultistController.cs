@@ -12,7 +12,7 @@ public class CultistController : MonoBehaviour {
     [SerializeField]
     private Transform[] ladderChecks;
     public float speed;
-    public Boundary boundary;
+    //public Boundary boundary;
 
     private bool climbEnabled;
     private bool facingRight = true;
@@ -94,11 +94,13 @@ public class CultistController : MonoBehaviour {
         myAnimator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
         Flip(moveHorizontal);
 
+        /*
         myRigidBody.position = new Vector3(
             Mathf.Clamp(myRigidBody.position.x, boundary.xMin, boundary.xMax),
             Mathf.Clamp(myRigidBody.position.y, boundary.yMin, boundary.yMax),
             0.0f
         );
+        */
     }
 
     private void Flip(float horizontal)

@@ -42,7 +42,10 @@ public class CultistController : MonoBehaviour {
 
         if (NotRitualAnimatorState())
         {
-            ActivateImages(currentAnimation, false);
+            foreach (GameObject ritualImage in ritualImages)
+            {
+                ritualImage.SetActive(false);
+            }
         } else
         {
             ActivateImages(currentAnimation, true);

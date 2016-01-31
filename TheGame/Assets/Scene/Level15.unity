@@ -6272,6 +6272,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.6260371
       objectReference: {fileID: 0}
+    - target: {fileID: 11456398, guid: 71df13bb05a48844ea4d23d891bbb77a, type: 2}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 2100284060}
     m_RemovedComponents:
     - {fileID: 6188432, guid: 71df13bb05a48844ea4d23d891bbb77a, type: 2}
     - {fileID: 6148706, guid: 71df13bb05a48844ea4d23d891bbb77a, type: 2}
@@ -6540,24 +6544,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 751c188c902de7e4abf46a7009853bf8, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1514803670 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 119720, guid: 71df13bb05a48844ea4d23d891bbb77a, type: 2}
-  m_PrefabInternal: {fileID: 1435490264}
---- !u!61 &1514803675
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1514803670}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.71, y: 2.89}
 --- !u!1 &1526734885
 GameObject:
   m_ObjectHideFlags: 0

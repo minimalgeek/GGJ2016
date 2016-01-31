@@ -138,9 +138,6 @@ public class LevelAndClockController : MonoBehaviour {
         {
             // wrong ritual order!
             counter = 0;
-        } else
-        {
-            
         }
     }
     

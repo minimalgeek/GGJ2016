@@ -19,7 +19,10 @@ public class RitualColliderController : MonoBehaviour {
         levelAndClockController = FindObjectOfType<LevelAndClockController>();
         soundController = FindObjectOfType<SoundController>();
         pentaMonsta = GameObject.Find("PentaMonsta");
-        pentaMonsta.GetComponent<SpriteRenderer>().sortingOrder = -10;
+        if (pentaMonsta != null)
+        {
+            pentaMonsta.GetComponent<SpriteRenderer>().sortingOrder = -10;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -50,7 +53,6 @@ public class RitualColliderController : MonoBehaviour {
             {
                 pentaMonsta.GetComponent<SpriteRenderer>().sortingOrder = 0;
                 pentaMonsta.transform.position = gameObject.transform.position;
-                Destroy(gameObject);
             } else if (gameObjectName == "Shower" || gameObjectName == "Poop")
             {
                 // TODO figure it out

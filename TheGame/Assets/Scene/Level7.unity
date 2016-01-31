@@ -2155,6 +2155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 669515098}
+  pentaMonsta: {fileID: 0}
 --- !u!212 &43408507
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4112,6 +4113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 774833348}
+  pentaMonsta: {fileID: 0}
 --- !u!212 &91585110
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8173,6 +8175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2043636061}
+  pentaMonsta: {fileID: 0}
 --- !u!61 &740232282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9330,6 +9333,52 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1117765639
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1346688908}
+    m_Modifications:
+    - target: {fileID: 480062, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480062, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480062, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480062, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480062, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480062, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480062, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 480062, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1117765640 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 480062, guid: 6e98263d15a13de48b08bd24ea8b52ce, type: 2}
+  m_PrefabInternal: {fileID: 1117765639}
 --- !u!224 &1117947243 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22419132, guid: 155c920ec02286f45bde5e6c3ac325b5,
@@ -11090,6 +11139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1956737678}
+  pentaMonsta: {fileID: 0}
 --- !u!212 &1167599355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11736,7 +11786,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.71, y: 0.51, z: 0}
   m_LocalScale: {x: 0.61855716, y: 0.6185571, z: 0.6185571}
-  m_Children: []
+  m_Children:
+  - {fileID: 1117765640}
   m_Father: {fileID: 439280864}
   m_RootOrder: 6
 --- !u!199 &1346688909
@@ -13294,6 +13345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 799813500}
+  pentaMonsta: {fileID: 0}
 --- !u!61 &1346688912
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15528,6 +15580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1398697859}
+  pentaMonsta: {fileID: 0}
 --- !u!212 &1435490272
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17461,6 +17514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1117947243}
+  pentaMonsta: {fileID: 0}
 --- !u!212 &1541705111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20926,6 +20980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 209655435}
+  pentaMonsta: {fileID: 0}
 --- !u!61 &1971878800
 BoxCollider2D:
   m_ObjectHideFlags: 0

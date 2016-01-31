@@ -9,11 +9,13 @@ public class RitualColliderController : MonoBehaviour {
 
     private LevelAndClockController levelAndClockController;
     private CultistController cultistController;
+    private SoundController soundController;
 
     void Start()
     {
         cultistController = FindObjectOfType<CultistController>();
         levelAndClockController = FindObjectOfType<LevelAndClockController>();
+        soundController = FindObjectOfType<SoundController>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -36,12 +38,14 @@ public class RitualColliderController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space) && executionEnabled)
         {
-            GameState.instance.LevelState.AddExecutedRitual(this.gameObject.name);
+            string gameObjectName = this.gameObject.name;
+            GameState.instance.LevelState.AddExecutedRitual(gameObjectName);
             Destroy(image.GetComponent<Image>());
             Destroy(gameObject);
 
-            levelAndClockController.ProgessAndCheckWin(this.gameObject.name);
-            cultistController.Animate(this.gameObject.name);
+            levelAndClockController.ProgessAndCheckWin(gameObjectName);
+            cultistController.Animate(gameObjectName);
+            soundController.PlayByName(gameObjectName);
         }
     }
 

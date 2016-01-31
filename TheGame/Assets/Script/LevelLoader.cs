@@ -7,14 +7,11 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        GameState.instance.LevelState.currentLevel++;
-        string sceneName = "Level" + GameState.instance.LevelState.currentLevel;
+        string sceneName = "Level" + GameState.instance.LevelState.currentLevel + 1;
         if (SceneManager.GetSceneByName(sceneName) != null)
         {
+            GameState.instance.LevelState.currentLevel++;
             SceneManager.LoadScene(sceneName);
-        } else
-        {
-            GameState.instance.LevelState.currentLevel--; // hák
         }
     }
 

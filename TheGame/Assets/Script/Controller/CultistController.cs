@@ -15,6 +15,7 @@ public class CultistController : MonoBehaviour {
     public Boundary boundary;
 
     private bool climbEnabled;
+    private bool facingRight = true;
 
     private Rigidbody2D myRigidBody;
     private Animator myAnimator;
@@ -61,11 +62,23 @@ public class CultistController : MonoBehaviour {
         }
         myRigidBody.velocity = movement;
         myAnimator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
+        Flip(moveHorizontal);
 
         myRigidBody.position = new Vector3(
             Mathf.Clamp(myRigidBody.position.x, boundary.xMin, boundary.xMax),
             Mathf.Clamp(myRigidBody.position.y, boundary.yMin, boundary.yMax),
             0.0f
         );
+    }
+
+    private void Flip(float horizontal)
+    {
+        if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
+        {
+            facingRight = !facingRight;
+            Vector2 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
     }
 }
